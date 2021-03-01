@@ -13,17 +13,16 @@ public class Recorder {
 	private long fileSize;
 	private Printer printer;
 	
-	public Recorder() {
+	public Recorder(RandomAccessFile file) {
 		this.value = 0; //8 bytes
 		this.chassi = ""; //60 bytes
 		this.name = ""; //90 bytes
 		this.color = ""; //70 bytes
 		this.quantity = 0; //4 bytes
 		this.fileSize = 0; //codigo do Tiago 
-		this.printer = new Printer();
+		this.file = file;
+		this.printer = new Printer(file);
 	}
-
-
 
 	//Grava novos atributos na posicao de memoria indicada
 	public void grava(long L1) {

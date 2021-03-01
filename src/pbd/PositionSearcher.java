@@ -8,7 +8,7 @@ public class PositionSearcher {
 	private String chassi;
 	private ComparatorChassi chassiComparator;
 	
-	public PositionSearcher(RandomAccessFile file, String chassi, ComparatorChassi chassiComparator) {
+	public PositionSearcher(RandomAccessFile file) {
 		this.file = file;
 		this.chassi = "";
 		this.chassiComparator = new ComparatorChassi();
